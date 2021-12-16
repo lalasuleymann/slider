@@ -96,11 +96,17 @@ closeIcon.addEventListener("click", function () {
 
 document.addEventListener("keydown", (e) => {
   if (e.code === "Escape" && popup.style.display === "flex") {
-    console.log("work");
     closeFunction();
   }
 });
 
+document .addEventListener("keydown", (e) =>{
+  if (e.code === "Enter") {
+    enterFunction();
+    blockFunction();
+    showFunction();
+  }
+})
 popup.addEventListener("click", (e) => {
   if (e.target.classList.contains("popup")) {
     closeFunction();
